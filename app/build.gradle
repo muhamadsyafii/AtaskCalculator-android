@@ -1,6 +1,11 @@
+import id.syafii.ataskcalculator.libs.AndroidX
+import id.syafii.ataskcalculator.libs.Google
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -34,11 +39,20 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation Google.material
+    implementation Google.gson
+    implementation Google.hiltAndroid
+    kapt Google.hiltAndroidCompiler
+    implementation Google.mlkitTextTecognition
+    implementation AndroidX.constraintLayout
+    testImplementation AndroidX.testJunit
+    androidTestImplementation AndroidX.testEspresso
+    implementation AndroidX.activityKtx
+    implementation AndroidX.fragmentKtx
+    implementation AndroidX.lifecycleLivedata
+    implementation AndroidX.lifecycleViewModel
+    implementation AndroidX.lifecycleRuntime
+    implementation AndroidX.swipeRefresh
+    implementation AndroidX.coreKtx
+    implementation AndroidX.appCompact
 }
