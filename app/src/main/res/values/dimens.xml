@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Muhamad Syafii
+  ~ Friday, 22/9/2023
+  ~ Copyright (c) 2023.
+  ~ All Rights Reserved
+  -->
+
+<resources>
+    <!--    textsize-->
+    <dimen name="dimens_txt_8sp">8sp</dimen>
+    <dimen name="dimens_txt_10sp">10sp</dimen>
+    <dimen name="dimens_txt_11sp">11sp</dimen>
+    <dimen name="dimens_txt_12sp">12sp</dimen>
+    <dimen name="dimens_txt_14sp">14sp</dimen>
+    <dimen name="dimens_txt_16sp">16sp</dimen>
+    <dimen name="dimens_txt_18sp">18sp</dimen>
+    <dimen name="dimens_txt_20sp">20sp</dimen>
+    <dimen name="dimens_txt_24sp">24sp</dimen>
+    <dimen name="dimens_txt_28sp">28sp</dimen>
+    <dimen name="dimens_txt_32sp">32sp</dimen>
+    <dimen name="dimens_txt_38sp">38sp</dimen>
+    <dimen name="text_captions_12sp">12sp</dimen>
+
+
+    <!--text size-->
+    <dimen name="text_header_20sp">20sp</dimen>
+    <dimen name="text_sub_header_14sp">14sp</dimen>
+    <dimen name="text_contents_12sp">12sp</dimen>
+    <dimen name="text_captions_10sp">10sp</dimen>
+
+    <!--ratio-->
+    <dimen name="dimens_0dp">0dp</dimen>
+    <dimen name="dimens_1dp">1dp</dimen>
+    <dimen name="dimens_2dp">2dp</dimen>
+    <dimen name="dimens_3dp">3dp</dimen>
+    <dimen name="dimens_4dp">4dp</dimen>
+    <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_6dp">6dp</dimen>
+    <dimen name="dimens_7dp">7dp</dimen>
+    <dimen name="dimens_8dp">8dp</dimen>
+    <dimen name="dimens_10dp">10dp</dimen>
+    <dimen name="dimens_11dp">11dp</dimen>
+    <dimen name="dimens_12dp">12dp</dimen>
+    <dimen name="dimens_14dp">14dp</dimen>
+    <dimen name="dimens_15dp">15dp</dimen>
+    <dimen name="dimens_16dp">16dp</dimen>
+    <dimen name="dimens_18dp">18dp</dimen>
+    <dimen name="dimens_19dp">19dp</dimen>
+    <dimen name="dimens_20dp">20dp</dimen>
+    <dimen name="dimens_21dp">21dp</dimen>
+    <dimen name="dimens_24dp">24dp</dimen>
+    <dimen name="dimens_25dp">25dp</dimen>
+    <dimen name="dimens_29dp">29dp</dimen>
+    <dimen name="dimens_32dp">32dp</dimen>
+    <dimen name="dimens_33dp">33dp</dimen>
+    <dimen name="dimens_34dp">34dp</dimen>
+    <dimen name="dimens_37dp">37dp</dimen>
+    <dimen name="dimens_40dp">40dp</dimen>
+    <dimen name="dimens_41dp">41dp</dimen>
+    <dimen name="dimens_43dp">43dp</dimen>
+    <dimen name="dimens_44dp">44dp</dimen>
+    <dimen name="dimens_48dp">48dp</dimen>
+    <dimen name="dimens_52dp">52dp</dimen>
+    <dimen name="dimens_55dp">55dp</dimen>
+    <dimen name="dimens_56dp">56dp</dimen>
+    <dimen name="dimens_58dp">58dp</dimen>
+    <dimen name="dimens_60dp">60dp</dimen>
+    <dimen name="dimens_62dp">62dp</dimen>
+    <dimen name="dimens_63dp">63dp</dimen>
+    <dimen name="dimens_64dp">64dp</dimen>
+    <dimen name="dimens_67dp">67dp</dimen>
+    <dimen name="dimens_68dp">68dp</dimen>
+    <dimen name="dimens_73dp">73dp</dimen>
+    <dimen name="dimens_74dp">74dp</dimen>
+    <dimen name="dimens_76dp">76dp</dimen>
+    <dimen name="dimens_80dp">80dp</dimen>
+    <dimen name="dimens_82dp">82dp</dimen>
+    <dimen name="dimens_88dp">88dp</dimen>
+    <dimen name="dimens_89dp">89dp</dimen>
+    <dimen name="dimens_92dp">92dp</dimen>
+    <dimen name="dimens_99dp">99dp</dimen>
+    <dimen name="dimens_100dp">100dp</dimen>
+</resources>

@@ -1,6 +1,12 @@
+import id.syafii.ataskcalculator.libs.AndroidX
+import id.syafii.ataskcalculator.libs.Google
+import id.syafii.ataskcalculator.libs.JetBrains
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -21,24 +27,96 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+
+        //add this if using build config on flavor
+        buildConfig = true
+    }
+
+
+    flavorDimensions 'feature'
+    productFlavors {
+
+        redFilesystem {
+            dimension "feature"
+            applicationIdSuffix ".red.filesystem"
+            resValue "string", "app_name", "App Red Filesystem"
+            manifestPlaceholders = [appTheme: "@style/AppTheme.Red"]
+            buildConfigField "boolean", "isFilesystemEnabled", "true"
+        }
+        redBuiltInCamera {
+            dimension "feature"
+            applicationIdSuffix ".red.built_in_camera"
+            resValue "string", "app_name", "App Red Built-in Camera"
+            manifestPlaceholders = [appTheme: "@style/AppTheme.Red"]
+            buildConfigField "boolean", "isFilesystemEnabled", "false"
+
+        }
+
+        greenFilesystem {
+            dimension "feature"
+            applicationIdSuffix ".green.filesystem"
+            resValue "string", "app_name", "App Green Filesystem"
+            manifestPlaceholders = [appTheme: "@style/AppTheme.Green"]
+            buildConfigField "boolean", "isFilesystemEnabled", "true"
+        }
+
+        greenBuiltInCamera {
+            dimension "feature"
+            applicationIdSuffix ".green.built_in_camera"
+            resValue "string", "app_name", "App Green Built-in Camera"
+            manifestPlaceholders = [appTheme: "@style/AppTheme.Green"]
+            buildConfigField "boolean", "isFilesystemEnabled", "false"
+
+        }
+    }
+
+    applicationVariants.all { variant ->
+        def flavorName = variant.productFlavors.find { it.dimension == 'feature' }?.name ?: ""
+
+        // Replace multiple underscores with a single hyphen
+        def formattedFeature = flavorName.replaceAll(/_+/,'-')
+
+        // Insert hyphens between camel case words and make it lowercase
+        formattedFeature = formattedFeature.replaceAll(/([a-z])([A-Z])/,'$1-$2').toLowerCase()
+
+        // Set a custom output file name based on the formatted flavor name
+        variant.outputs.all { output ->
+            outputFileName = "app-${formattedFeature}.apk"
+        }
     }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation Google.material
+    implementation Google.gson
+    implementation Google.hiltAndroid
+    kapt Google.hiltAndroidCompiler
+    implementation Google.mlkitTextTecognition
+    implementation AndroidX.constraintLayout
+    testImplementation AndroidX.testJunit
+    androidTestImplementation AndroidX.testEspresso
+    implementation AndroidX.activityKtx
+    implementation AndroidX.fragmentKtx
+    implementation AndroidX.lifecycleLivedata
+    implementation AndroidX.lifecycleViewModel
+    implementation AndroidX.lifecycleRuntime
+    implementation AndroidX.swipeRefresh
+    implementation AndroidX.coreKtx
+    implementation AndroidX.appCompact
+    implementation JetBrains.coroutinesPlayServices
+    implementation JetBrains.coroutinesAndroid
 }
