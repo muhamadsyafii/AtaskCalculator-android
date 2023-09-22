@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Base color values -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Color values for the "red" flavor -->
+    <color name="redPrimaryColor">#FF0000</color>
+    <color name="redPrimaryDarkColor">#CC0000</color>
+    <color name="redAccentColor">#FF5722</color>
+
+    <!-- Color values for the "green" flavor -->
+    <color name="greenPrimaryColor">#00FF00</color>
+    <color name="greenPrimaryDarkColor">#00CC00</color>
+    <color name="greenAccentColor">#4CAF50</color>
+
 </resources>
