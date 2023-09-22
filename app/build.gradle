@@ -107,7 +107,8 @@ dependencies {
     kapt Google.hiltAndroidCompiler
     implementation Google.mlkitTextTecognition
     implementation AndroidX.constraintLayout
-    testImplementation AndroidX.testJunit
+    testImplementation AndroidX.junit
+    androidTestImplementation AndroidX.testJunit
     androidTestImplementation AndroidX.testEspresso
     implementation AndroidX.activityKtx
     implementation AndroidX.fragmentKtx
