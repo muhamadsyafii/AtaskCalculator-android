@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Atask Calculator</string>
+    <string name="label_open_gallery">Open Gallery</string>
+    <string name="label_open_camera">Open Camera</string>
+    <string name="label_question">Question : %1$s</string>
+    <string name="label_answer">Answer : %1$s</string>
 </resources>
